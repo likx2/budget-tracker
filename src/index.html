@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Budget Tracker</title>
+</head>
+<body class="text-foreground">
+<div class="w-screen h-screen bg-gray-100 p-5">
+    <div class="w-full max-w-screen-xl bg-white m-auto rounded-md shadow p-6">
+        <header class="flex items-center justify-between gap-3">
+            <h1 class="font-bold text-3xl">Budget Tracker</h1>
+            <div class="flex gap-2 items-center">
+                <button id="add-button" class="`
+                    flex items-center gap-1
+                    rounded-md bg-primary text-white
+                    h-9 py-2 px-3
+                    hover:bg-primary/90 transition-colors duration-200 ease-in-out
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary
+                `"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="icon icon-tabler icons-tabler-outline icon-tabler-plus w-5 h-5">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 5l0 14"/>
+                        <path d="M5 12l14 0"/>
+                    </svg>
+                    <span class="text-sm font-medium hidden md:inline">Add</span>
+                </button>
+                <button class="`
+                    flex items-center gap-1
+                    rounded-md border bg-white
+                    h-9 py-2 px-3
+                    hover:bg-primary/10 transition-colors duration-200 ease-in-out
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary
+                `"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="icon icon-tabler icons-tabler-outline icon-tabler-trash w-5 h-5">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 7l16 0"/>
+                        <path d="M10 11l0 6"/>
+                        <path d="M14 11l0 6"/>
+                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"/>
+                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"/>
+                    </svg>
+                    <span class="text-sm font-medium hidden md:inline">Clear</span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <div id="drawer-overlay" class="fixed w-screen h-screen left-0 top-0 bg-black/50 hidden"></div>
+            <aside id="drawer" class="fixed top-0 right-0 bg-white h-full w-96 p-6 rounded-md translate-x-full transition-transform duration-200 ease-in-out">
+                <button id="close-button" class="`
+                absolute top-4 right-4 rounded-md
+                opacity-60 hover:opacity-100 transition-opacity duration-200 ease-in-out
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary
+                `"
+                        aria-label="Close a drawer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="icon icon-tabler icons-tabler-outline icon-tabler-x w-5 h-5">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M18 6l-12 12"/>
+                        <path d="M6 6l12 12"/>
+                    </svg>
+                </button>
+                <h2 class="font-bold text-xl">Add transaction</h2>
+            </aside>
+        </main>
+    </div>
+</div>
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
