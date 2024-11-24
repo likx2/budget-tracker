@@ -1,3 +1,5 @@
+import { renderForm } from "./form.js";
+
 export const renderDrawer = () => {
     const drawerOverlay = document.getElementById('drawer-overlay');
     const drawer = document.getElementById('drawer');
@@ -29,4 +31,7 @@ export const renderDrawer = () => {
             close();
         }
     });
+
+
+    renderForm(close);
 };

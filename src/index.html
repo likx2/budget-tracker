@@ -53,7 +53,8 @@
         </header>
         <main>
             <div id="drawer-overlay" class="fixed w-screen h-screen left-0 top-0 bg-black/50 hidden"></div>
-            <aside id="drawer" class="fixed top-0 right-0 bg-white h-full w-96 p-6 rounded-md translate-x-full transition-transform duration-200 ease-in-out">
+            <aside id="drawer"
+                   class="fixed top-0 right-0 bg-white h-full w-96 p-6 rounded-md translate-x-full transition-transform duration-200 ease-in-out">
                 <button id="close-button" class="`
                 absolute top-4 right-4 rounded-md
                 opacity-60 hover:opacity-100 transition-opacity duration-200 ease-in-out
@@ -68,8 +69,56 @@
                         <path d="M6 6l12 12"/>
                     </svg>
                 </button>
-                <h2 class="font-bold text-xl">Add transaction</h2>
+                <h2 class="font-semibold text-xl">Add transaction</h2>
+                <form id="transaction-form" class="mt-3 flex flex-col gap-2">
+                    <div>
+                        <label for="transaction-description" class="text-sm block">Description</label>
+                        <input id="transaction-description"
+                               name="description"
+                               type="text"
+                               required
+                               class="mt-1 text-sm w-full h-10 px-3 py-2 rounded-lg bg-white border placeholder:font-light focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none"
+                               placeholder="eg. Groceries, Salary"/>
+                    </div>
+                    <div>
+                        <label for="transaction-amount" class="text-sm block">Amount</label>
+                        <input id="transaction-amount"
+                               name="amount"
+                               type="number"
+                               required
+                               pattern="1"
+                               class="mt-1 text-sm w-full h-10 px-3 py-2 rounded-lg bg-white border placeholder:font-light focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none"
+                               placeholder="Positive for income, negative for expenses"/>
+                    </div>
+                    <div>
+                        <label for="transaction-category" class="text-sm block">Category</label>
+                        <select id="transaction-category"
+                                name="category"
+                                required
+                                class="appearance-none mt-1 text-sm w-full h-10 px-3 py-2 rounded-lg bg-white border placeholder:font-light focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 outline-none">
+                            <option selected disabled>Add a category</option>
+                            <option value="income">Income</option>
+                            <option value="bills">Bills</option>
+                            <option value="housing">Housing</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="transportation">Transportation</option>
+                        </select>
+                    </div>
+                    <button class="`
+                    flex items-center gap-1
+                    rounded-md bg-primary text-white
+                    h-9 py-2 px-3 ml-auto
+                    hover:bg-primary/90 transition-colors duration-200 ease-in-out
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary
+                `"
+                    >
+                        Save
+                    </button>
+                </form>
             </aside>
+            <div id="metrics" class="flex gap-3 mt-3">
+            <!-- Metrics -->
+            </div>
         </main>
     </div>
 </div>
