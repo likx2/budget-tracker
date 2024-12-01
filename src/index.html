@@ -29,7 +29,7 @@
                     </svg>
                     <span class="text-sm font-medium hidden md:inline">Add</span>
                 </button>
-                <button class="`
+                <button id="clear-button" class="`
                     flex items-center gap-1
                     rounded-md border bg-white
                     h-9 py-2 px-3
@@ -51,7 +51,7 @@
                 </button>
             </div>
         </header>
-        <main>
+        <main class="mt-10">
             <div id="drawer-overlay" class="fixed w-screen h-screen left-0 top-0 bg-black/50 hidden"></div>
             <aside id="drawer"
                    class="fixed top-0 right-0 bg-white h-full w-96 p-6 rounded-md translate-x-full transition-transform duration-200 ease-in-out">
@@ -116,8 +116,22 @@
                     </button>
                 </form>
             </aside>
-            <div id="metrics" class="flex gap-3 mt-3">
+            <div id="metrics" class="flex gap-4">
             <!-- Metrics -->
+            </div>
+            <div class="flex gap-4 min-h-96 h-0 mt-4">
+                <div class="flex-1 flex h-full flex-col p-6 border rounded-xl shadow">
+                    <h2 class="font-semibold text-lg">Expenses chart</h2>
+                    <div id="expenses-chart">
+                        <!--Expenses chart-->
+                    </div>
+                </div>
+                <div class="flex-1 flex h-full flex-col p-6 border rounded-xl shadow">
+                    <h2 class="font-semibold text-lg">Recent transactions</h2>
+                    <div id="transaction-list" class="flex-1 flex flex-col overflow-hidden">
+                        <!--Transaction List-->
+                    </div>
+                </div>
             </div>
         </main>
     </div>
