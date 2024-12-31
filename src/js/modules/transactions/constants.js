@@ -22,3 +22,16 @@ export const MAP_CATEGORIES_TO_ICON = {
     transportation: transportationIcon,
 };
 
+
+export const TRANSACTION_CATEGORIES = {
+    positive: [
+        'income'
+    ],
+    negative: [
+        'entertainment',
+        'bills',
+        'housing',
+        'transportation',
+    ],
+};
+

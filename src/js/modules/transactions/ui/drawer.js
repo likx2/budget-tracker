@@ -1,6 +1,6 @@
 import { renderForm } from "./form.js";
 
-export const renderDrawer = () => {
+export const renderDrawer = (onSubmit) => {
     const drawerOverlay = document.getElementById('drawer-overlay');
     const drawer = document.getElementById('drawer');
     const addButton = document.getElementById('add-button');
@@ -33,5 +33,8 @@ export const renderDrawer = () => {
     });
 
 
-    renderForm(close);
+    renderForm(() => {
+        close();
+        onSubmit();
+    });
 };

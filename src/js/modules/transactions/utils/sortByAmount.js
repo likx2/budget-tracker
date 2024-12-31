@@ -1,0 +1,1 @@
+export const sortByAmount = (transactions) => transactions.sort((a, b) => b.amount - a.amount);

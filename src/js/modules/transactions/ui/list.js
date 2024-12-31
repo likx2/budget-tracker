@@ -13,7 +13,7 @@ export const renderList = () => {
     const sortedTransactions = sortByTimestamp(transactions);
 
     container.innerHTML = `
-    ${sortedTransactions.length > 0 ? `<p class="text-gray-500 font-light mt-1">You've made ${sortedTransactions.length} transactions.</p>` : ''}
+    ${sortedTransactions.length > 0 ? `<p class="text-gray-500 font-light">You've made ${sortedTransactions.length} transactions.</p>` : ''}
     ${sortedTransactions.length > 0 ? `<ul class="mt-3 overflow-y-auto flex-1 space-y-3">${sortedTransactions.reduce((all, current) => all + renderItem(current), "")}</ul>` : renderEmptyMessage('Your transactions will appear here.')}
     `;
 };
